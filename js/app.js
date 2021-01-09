@@ -17,9 +17,6 @@ $(document).ready(function(){
 				$("#campoRua").val(data.logradouro)
 				$("#campoBairro").val(data.bairro)
 				
-				if (data.complemento === '') {
-					$("#campoComplemento").val('Nenhum complemento detectado')
-				}
 			},
 			error: function(erro) {
 				console.log(erro)
@@ -27,3 +24,11 @@ $(document).ready(function(){
 		})
 	})
 })
+
+function limparCampos() {
+	document.getElementById('campoCEP').value = ''
+	document.getElementById('campoCidade').value = ''
+	document.getElementById('campoUF').value = ''
+	document.getElementById('campoRua').value = ''
+	document.getElementById('campoBairro').value = ''
+}
